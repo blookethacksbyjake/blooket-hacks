@@ -1,0 +1,17 @@
+flappyPhaserGame = () => {
+    let a = Object.values(document.querySelector("#phaser-bouncy"))[0].stateNode
+    return a[Object.keys(a).filter(b => b.includes("reactInternalInstance"))].return
+}
+
+(() => {
+    let n = document.createElement('iframe');
+    document.body.append(n);
+    window.prompt = n.contentWindow.prompt.bind(window);
+    n.remove();
+})();
+
+flappyPhaserGame().stateNode.setState({ score: parseInt(prompt("How much score would you like?")) });
+
+element.style = `font-family: "Arial", sans-serif; font-size: 14px; height: 60px; width: 170px; border: 4px solid rgb(255,255,255); background: rgb(240, 240, 240); position: absolute; top: 20x; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center;`;
+    element.innerHTML = `<p>created by jakeh <br> > <a style="color: #ff0000;" href="https://classroom.google.com/" target="_blank">Google Classroom</a></p>`;
+    document.body.appendChild(element);
